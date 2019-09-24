@@ -17,3 +17,12 @@ def paginaProdutoView(req):
 
 def paginaHomeView(req):
     return render(req, 'paginas/home.html', {})
+
+def paginaCadastroView(req):
+    return render(req, 'paginas/cadastro.html', {})
+
+def paginaLoginView(req):
+    return render(req, 'paginas/login.html', {})
+
+def paginaContatoView(req):
+    return render(req, 'paginas/contato.html', {})

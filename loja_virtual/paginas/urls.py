@@ -1,10 +1,13 @@
 from django.urls import path
 
-from .views import paginaInicioView, paginaAboutView, paginaProdutoView, paginaHomeView
+from .views import paginaInicioView, paginaAboutView, paginaProdutoView, paginaHomeView, paginaCadastroView, paginaContatoView, paginaLoginView
 
 urlpatterns =[
     path('', paginaInicioView, name='inicio'),
     path('sobre/', paginaAboutView, name='sobre'),
     path('produto/',paginaProdutoView, name='produto'),
-    path('home/', paginaHomeView, name='home')
+    path('home/', paginaHomeView, name='home'),
+    path('cadastro/', paginaCadastroView, name='cadastro'),
+    path('contato/', paginaContatoView, name='contato'),
+    path('login/', paginaLoginView, name='login')
 ]
