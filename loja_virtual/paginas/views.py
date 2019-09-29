@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.generic import ListView, DetailView
 
-
+from .models import Orcamento
 # Create your views here.
 
 def paginaInicioView(req):
@@ -26,3 +27,12 @@ def paginaLoginView(req):
 
 def paginaContatoView(req):
     return render(req, 'paginas/contato.html', {})
+
+
+class OrcamentoListView(ListView):
+    model = Orcamento
+    template_name = "paginas/orcamentos.html"
+
+class OrcamentoDetailView(DetailView):
+    model = Orcamento
+    template_name = "paginas/orcamento_detail.html"
